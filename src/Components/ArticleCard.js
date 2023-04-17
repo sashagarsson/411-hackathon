@@ -2,5 +2,3 @@ import React from "react";
 
 
   
-
-  

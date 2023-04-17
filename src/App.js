@@ -1,11 +1,12 @@
-
-import './App.css';
-import FetchApp from './Components/FetchApp';
+import "./App.css";
+import React from "react";
+import FetchApp from './components/FetchData'
 
 function App() {
   return (
     <div className="App">
-     <FetchApp />
+     <FetchApp/>
+
     </div>
   );
 }
