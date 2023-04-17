@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import ListArticles from "./ListArticles";
 
 export default function FetchApp() {
     const [articles, setArticles] = useState([]);
@@ -19,14 +20,9 @@ export default function FetchApp() {
   
     return (
       <div className="article-list">
-       
           {articles.map((article) => {
             return (
-              <div className="article-info" key={article.ObjectID}>
-                <h4>{article.title} ({article.url})</h4>
-                <p>{article.points} points By {article.author} Comments: {article.num_comments}</p>
-
-              </div>
+                <ListArticles data={article} />
             );
           })}
         
