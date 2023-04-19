@@ -6,6 +6,10 @@ import CommentIcon from "@mui/icons-material/Comment"
 import PersonIcon from "@mui/icons-material/Person"
 
 export default function ListArticles(props) {
+  if (!props?.data.title) {
+    return null;
+  }
+
   return (
 
     <div className="article-info" key={props?.data.ObjectID}>
@@ -13,8 +17,8 @@ export default function ListArticles(props) {
         {props?.data.title} :&nbsp;
         {props?.data.url && (
           <a className="link" href={props.data.url}>
-          {props.data.url}
-        </a>
+            {props.data.url}
+          </a>
         )}
         
 
@@ -26,12 +30,12 @@ export default function ListArticles(props) {
         </a>
 
       </h4>
+
       <Box
         sx={{
           display: "flex",
           alignItems: "center",
           width: "fit-content",
-
           borderRadius: 1,
           bgcolor: "3D3C42",
           color: "#FEFBF6",
@@ -63,5 +67,6 @@ export default function ListArticles(props) {
 
       </Box>
     </div>
-  )
+  );
 }
+
