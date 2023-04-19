@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+.App {
+    position: absolute;
+    background-color: #3D3C42;
+    color: #FEFBF6;
+    width: 100vw;
+}
+
+.stars {
+    width: 100vw;
+    height: 100vw;
+
+    position: fixed;
+}
+
+.article-info {
+    margin-top: 10px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+.article-info:hover {
+    background-color: #7F5283;
+}
+
+h4 {
+    margin: 0;
+}
+
+a {
+    color: #A6D1E6;
+    text-decoration: none;
+ }
