@@ -7,6 +7,7 @@ import PersonIcon from "@mui/icons-material/Person"
 
 export default function ListArticles(props) {
   return (
+
     <div className="article-info" key={props?.data.ObjectID}>
       <h4>
         {props?.data.title} :&nbsp;
@@ -16,6 +17,14 @@ export default function ListArticles(props) {
         </a>
         )}
         
+
+    <div className="article-info" key={props.data.ObjectID}>
+      <h4>
+        {props.data.title} :&nbsp;
+        <a className="link" href={props.data.url}>
+          {props.data.url}
+        </a>
+
       </h4>
       <Box
         sx={{
@@ -35,6 +44,7 @@ export default function ListArticles(props) {
         }}
       >
         <ThumbUpIcon sx={{ fontSize: 15 }} />
+
         <p>{props?.data.points} &nbsp;</p>
         <Divider orientation="vertical" variant="middle" flexItem />
         <CommentIcon sx={{ fontSize: 17 }} />
@@ -42,6 +52,15 @@ export default function ListArticles(props) {
         <Divider orientation="vertical" variant="middle" flexItem />
         <PersonIcon sx={{ fontSize: 19 }} />
         <p>{props?.data.author} </p>
+
+        <p>{props.data.points} &nbsp;</p>
+        <Divider orientation="vertical" variant="middle" flexItem />
+        <CommentIcon sx={{ fontSize: 17 }} />
+        <p>{props.data.num_comments} &nbsp;</p>
+        <Divider orientation="vertical" variant="middle" flexItem />
+        <PersonIcon sx={{ fontSize: 19 }} />
+        <p>{props.data.author} </p>
+
       </Box>
     </div>
   )
