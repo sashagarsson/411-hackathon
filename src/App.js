@@ -1,14 +1,15 @@
-import "./App.css";
-import React from "react";
-import FetchApp from './components/FetchData'
+import "./App.css"
+import React from "react"
+import FetchApp from "./Components/FetchApp"
+import StarsCanvas from "./Components/Canvas/Stars"
 
 function App() {
   return (
     <div className="App">
-     <FetchApp/>
-
+      <StarsCanvas />
+      <FetchApp />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
