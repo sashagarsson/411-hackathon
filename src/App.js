@@ -7,12 +7,13 @@ import SearchBar from "./Components/SearchBar";
 function App() {
 
   const [searchParam, setSearchParam] = useState("");
+  const [type, setType] = useState("stories");
 
   return (
     <div className="App">
-      {/* <StarsCanvas /> */}
-      <SearchBar searchParam={searchParam} setSearchParam={setSearchParam} />
-      <FetchApp searchParam={searchParam} />
+      <StarsCanvas />
+      <SearchBar searchParam={searchParam} setSearchParam={setSearchParam} type={type} setType={setType}/>
+      <FetchApp searchParam={searchParam} type={type}/>
     </div>
   )
 }
