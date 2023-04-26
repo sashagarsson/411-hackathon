@@ -7,7 +7,7 @@ async function searchPage(id, date, author, title);
     let queryString = "";
     if (id) {
       queryString += `id=${id}`;
-    }
+    }name
     if (date) {
       queryString += `&date=${date}`;
     }
