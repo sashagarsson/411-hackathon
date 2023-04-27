@@ -45,4 +45,22 @@ h4 {
 a {
     color: #A6D1E6;
     text-decoration: none;
- }
+}
+
+.search {
+    position: relative;
+    z-index: 3;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: pink !important;
+}
+
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
+.MuiInputLabel-root {
+  color: white !important;
+} 
+

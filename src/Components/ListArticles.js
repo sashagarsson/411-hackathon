@@ -4,11 +4,19 @@ import Divider from "@mui/material/Divider"
 import ThumbUpIcon from "@mui/icons-material/ThumbUp"
 import CommentIcon from "@mui/icons-material/Comment"
 import PersonIcon from "@mui/icons-material/Person"
+import WatchLaterIcon from "@mui/icons-material/WatchLater"
+import TimeAgo from "javascript-time-ago"
+import en from "javascript-time-ago/locale/en"
 
 export default function ListArticles(props) {
   if (!props?.data.title) {
-    return null;
+    return null
   }
+
+  TimeAgo.addDefaultLocale(en)
+  const timeAgo = new TimeAgo("en-US")
+
+  const created = new Date(props?.data.created_at)
 
   return (
     <div className="article-info" key={props?.data.ObjectID}>
@@ -44,9 +52,12 @@ export default function ListArticles(props) {
         <p>{props?.data.num_comments} &nbsp;</p>
         <Divider orientation="vertical" variant="middle" flexItem />
         <PersonIcon sx={{ fontSize: 19 }} />
-        <p>{props?.data.author} </p>
+        <p>{props?.data.author} &nbsp;</p>
+        <Divider orientation="vertical" variant="middle" flexItem />
+        <WatchLaterIcon sx={{ fontSize: 17 }} />
+        {/* <p>{props?.data.created_at} </p> */}
+        <p>{timeAgo.format(created - 2 * 60 * 60 * 1000)} </p>
       </Box>
     </div>
-  );
+  )
 }
-
