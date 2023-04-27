@@ -11,9 +11,10 @@ function App() {
 
   return (
     <div className="App">
-      <StarsCanvas />
       <SearchBar searchParam={searchParam} setSearchParam={setSearchParam} type={type} setType={setType}/>
+      <StarsCanvas />
       <FetchApp searchParam={searchParam} type={type}/>
+      
     </div>
   )
 }
