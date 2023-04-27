@@ -26,6 +26,7 @@ function App() {
         type={type}
         age={age}
       />
+
     </div>
   )
 }
